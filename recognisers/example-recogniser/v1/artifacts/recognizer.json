@@ -1,47 +1,21 @@
 {
-  "name": "example-recogniser",
-  "version": "v1",
-  "description": "Description of the recogniser and what it detects",
-  "targetSpecies": [
-    "Species 1",
-    "Species 2"
+  "model_config": {
+    "model_key": "taxonomy_model_tf",
+    "embedding_dim": 1280,
+    "model_config": {
+      "window_size_s": 5.0,
+      "hop_size_s": 5.0,
+      "sample_rate": 32000,
+      "tfhub_version": 8,
+      "model_path": ""
+    },
+    "logits_key": null,
+    "logits_idxes": null
+  },
+  "classes": [
+    "Russet-tailed Thrush"
   ],
-  "callTypes": [
-    "call type 1",
-    "call type 2"
-  ],
-  "model": {
-    "type": "model type (e.g., CNN, Random Forest)",
-    "framework": "framework used (e.g., TensorFlow, PyTorch, scikit-learn)",
-    "modelFile": "path/to/model/file"
-  },
-  "performance": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1Score": 0.0,
-    "testDataset": "description or path to test dataset"
-  },
-  "training": {
-    "datasetSize": 0,
-    "dataSources": [
-      "source 1",
-      "source 2"
-    ],
-    "trainingDate": "YYYY-MM-DD"
-  },
-  "usage": {
-    "inputFormat": "audio format (e.g., WAV, FLAC)",
-    "sampleRate": 22050,
-    "parameters": {
-      "parameter1": "value",
-      "parameter2": "value"
-    }
-  },
-  "metadata": {
-    "author": "Author Name",
-    "contact": "email@example.com",
-    "license": "License type",
-    "created": "YYYY-MM-DD",
-    "updated": "YYYY-MM-DD"
-  }
+  "beta": "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",
+  "beta_bias": "ppSIvQ==",
+  "classifier_name": "russet_tailed_thrush"
 }
